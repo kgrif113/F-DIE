@@ -16,11 +16,13 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <UserContext.Provider value={{ createUser }}>
-      {children}
+        {children}
     </UserContext.Provider>
   );
 };
 
 export const UserAuth = () => {
-  return useContext(UserContext);
+  const context = useContext(UserContext);
+  console.log(context)
+  return context
 };

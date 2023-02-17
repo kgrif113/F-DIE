@@ -8,8 +8,10 @@ import logo from "./logo.png"
 
 function App() {
   return (
-    <div>
-     <a className="max-w-full" href="/"><img src={logo}></img> </a>
+    <div className="">
+      <div className="flex justify-center">
+     <a className="content-center max-w-full" href="/"><img className=" p-10" alt="FUDIE logo" src={logo}></img> </a>
+     </div>
      <AuthContextProvider>
      <Routes>
         <Route path='/' element={<Signin />} />
